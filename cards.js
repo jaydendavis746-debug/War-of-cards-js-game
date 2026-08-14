@@ -10,7 +10,7 @@ let p2deck = cards.slice(26,52);
 console.log("Welcome to WAR! Press q to quit at any point");
 
 
-const compare = (cardpile, d1, d2) => {
+const compare = (cardpile, p1deck, p2deck) => {
     let c1 = p1deck.shift()
     let c2 = p2deck.shift()
     let result = []
@@ -26,8 +26,8 @@ const compare = (cardpile, d1, d2) => {
         result = [2, cardpile];
     } else {
         console.log('War! Cards are equal')
-        cardpile.push(d1.shift(), d2.shift());
-        result = compare(cardpile, d1, d2)
+        cardpile.push(p1deck.shift(), p2deck.shift());
+        result = compare(cardpile, p1deck, p2deck)
     }
 
     return result
