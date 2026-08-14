@@ -37,14 +37,19 @@ const compare = (cardpile, d1, d2) => {
 while (p1deck.length > 0 && p2deck.length > 0){   
     const answer = prompt("Press enter to draw your next card");
     if (answer.toLowerCase() === "q") {return}
-    let results = compare([], p1deck, p2deck);
+    let pile = []
+    let results = compare(pile, p1deck, p2deck);
 
     if (results[0] == 1){
         //add cards to p1deck
-        console.log("p1 cards");
+        pile.forEach(card =>{
+                p1deck.push(card)
+            })
     } else {
         //add cards to p2 deck
-        console.log("p2 cards");
+        pile.forEach(card =>{
+                p2deck.push(card)
+            })
     }
 
     if(p1deck.length === 0){
