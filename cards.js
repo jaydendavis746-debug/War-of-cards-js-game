@@ -23,4 +23,10 @@ while (p1deck.length > 0 && p2deck.length > 0){
     } else {
         console.log('War! Cards are equal')
     }
+
+    if(p1deck.length === 0){
+        console.log('Player 2 is victorious');
+    } else if(p2deck.length === 0){
+        console.log('Player 1 is victorious');
+    }
 }
