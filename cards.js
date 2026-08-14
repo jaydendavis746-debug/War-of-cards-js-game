@@ -8,8 +8,8 @@ let p2deck = cards.slice(26,52);
 while (p1deck.length > 0 && p2deck.length > 0){
     console.log("Welcome to WAR! Press enter to flip card or q to quit");
     //take user input
-    const answer = getInput();
-    if (answer.toLowerCase() === "q") {return}
+    // const answer = getInput();
+    // if (answer.toLowerCase() === "q") {return}
     let p1Card = p1deck.shift()
     let p2Card = p2deck.shift()
 
