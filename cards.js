@@ -7,6 +7,7 @@ cards.sort(() => Math.random() - 0.5);
 let p1deck = cards.slice(0,26);
 let p2deck = cards.slice(26,52);
 
+
 console.log("Welcome to WAR! Press q to quit at any point");
 
 
@@ -26,6 +27,13 @@ const compare = (cardpile, p1deck, p2deck) => {
         result = [2, cardpile];
     } else {
         console.log('War! Cards are equal')
+        if(p1deck.length < 2){
+            p1deck.shift()
+            return [2, cardpile]
+        } else if(p2deck.length < 2){
+            p2deck.shift()
+            return [1, cardpile]
+        }
         cardpile.push(p1deck.shift(), p2deck.shift());
         result = compare(cardpile, p1deck, p2deck)
     }
