@@ -1,0 +1,12 @@
+- aim is to get all cards - ace is 11
+
+- split the deck into 2 
+
+
+- flip top cards
+- if the same {
+    place next card face down and flip the one after
+} 
+- highest flipped card wins
+
+repeat until 1 player has no cards
